@@ -4,6 +4,10 @@ const PORT = 3000;
 
 app.get('/', (req, res) => {
     res.send('Hello from Node.js app!');
+
+    setInterval(() => {
+        console.log(new Date().toLocaleString());
+    }, 1000);
 });
 
 app.get('/health', (req, res) => {
@@ -13,3 +17,4 @@ app.get('/health', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
